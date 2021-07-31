@@ -15,7 +15,7 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 
-namespace fs = std::__fs::filesystem;
+namespace fs = std::filesystem;
 
 int main(int argc, const char * argv[])
 {
