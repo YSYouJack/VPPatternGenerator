@@ -68,7 +68,7 @@ int main(int argc, const char * argv[])
         fs::create_directory(outDir);
     }
     
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    unsigned seed = static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count());
     std::shuffle(imagePairs.begin(), imagePairs.end(), std::default_random_engine(seed));
     
     // A4 Size: https://www.info.print-print.co.uk/guide-to-image-resolution/
@@ -119,7 +119,7 @@ int main(int argc, const char * argv[])
             ids[i] = static_cast<int>(i % 2);
         }
         
-        seed = std::chrono::system_clock::now().time_since_epoch().count();
+        seed = static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count());
         std::shuffle(ids.begin(), ids.end(), std::default_random_engine(seed));
         
         for (int i = 0; i < GRID_ROWS; ++i) {
